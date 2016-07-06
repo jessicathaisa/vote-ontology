@@ -1,0 +1,306 @@
+[
+  {
+    "term": "Proposition",
+    "mapping": "vote:Proposition",
+    "description": "A proposition is a formal proposal for changing a law, or create a new one.",
+    "popoloEquivalent": "opengov:Motion",
+    "type": "class",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "content",
+    "mapping": "vote:content",
+    "description": "Is the content of the Proposition.",
+    "popoloEquivalent": "schema:text",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "created",
+    "mapping": "dcterms:created",
+    "description": "The date on which the Proposition was proposed.",
+    "popoloEquivalent": "dcterms:dateSubmitted",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "creator",
+    "mapping": "dcterms:creator",
+    "description": "The person who proposed de Proposition.",
+    "popoloEquivalent": "schema:creator",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "document",
+    "mapping": "vote:document",
+    "description": "The Document of the Proposition.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "explain",
+    "mapping": "vote:explain",
+    "description": "Na explanation about the Proposition.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "keyword",
+    "mapping": "vote:keyword",
+    "description": "Keywords used to qualify the Proposition.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "name",
+    "mapping": "vote:name",
+    "description": "The name of the Proposition.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "number",
+    "mapping": "vote:number",
+    "description": "The number of the Proposition on the year.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "principal",
+    "mapping": "vote:principal",
+    "description": "The Principal Proposition related to this Propositon.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "situation",
+    "mapping": "vote:situation",
+    "description": "The situation of the Proposition.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "theme",
+    "mapping": "vote:theme",
+    "description": "Themes used to qualify the area of the Proposition.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "transational_regime",
+    "mapping": "vote:transational_regime",
+    "description": "The transational Regime in which the Proposition is.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "transformed_into",
+    "mapping": "vote:transformed_into",
+    "description": "The Law this Proposition turned into.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "type",
+    "mapping": "vote:type",
+    "description": "The type of the Proposition.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "year",
+    "mapping": "vote:year",
+    "description": "The year of the Proposition.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "Document",
+    "mapping": "bibo:Document",
+    "description": "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information. (From http://purl.org/ontology/bibo/Document)",
+    "popoloEquivalent": "",
+    "type": "class",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "uri",
+    "mapping": "bibo:uri",
+    "description": "Universal Resource Identifier of a document (From: http://purl.org/ontology/bibo/uri)",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "Disposition",
+    "mapping": "vote:Disposition",
+    "description": "The Disposition on which the Proposition will be voted.",
+    "popoloEquivalent": "",
+    "type": "class",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "proposition_object",
+    "mapping": "vote:proposition_object",
+    "description": "The Proposition that there is the object of this Disposition.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "disposition_nature",
+    "mapping": "vote:disposition_nature",
+    "description": "The nature of the disposition.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "Session",
+    "mapping": "vote:Session",
+    "description": "A Session is an event on which Dispositions are voted.",
+    "popoloEquivalent": "",
+    "type": "class",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "superEvent",
+    "mapping": "schema:superEvent",
+    "description": "The Session in which the vote event occurs.",
+    "popoloEquivalent": "schema:superEvent",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "VoteEvent",
+    "mapping": "opengov:VoteEvent",
+    "description": "A VoteEvent is na  event inside a Session on which a Disposition is voted",
+    "popoloEquivalent": "opengov:VoteEvent",
+    "type": "class",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "startDate",
+    "mapping": "schema:startDate",
+    "description": "The date when the VoteEvent begins.",
+    "popoloEquivalent": "schema:startDate",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "summary",
+    "mapping": "vote:summary",
+    "description": "The summary of the VoteEvent.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "voting_object",
+    "mapping": "vote:voting_object",
+    "description": "The Disposition will be voted on the VoteEvent.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "Recommendation",
+    "mapping": "vote:Recommendation",
+    "description": "The Recommendation of a group on the voting object.",
+    "popoloEquivalent": "",
+    "type": "class",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "has_recommendation",
+    "mapping": "vote:has_recommendation",
+    "description": "The VoteEvent on which there is a recommendation.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "recommended_by",
+    "mapping": "vote:recommended_by",
+    "description": "The Group that made the recomendation.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "option",
+    "mapping": "schema:option",
+    "description": "The teor of the Recommendation or of the Vote.",
+    "popoloEquivalent": "schema:option",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "Group",
+    "mapping": "foaf:Group",
+    "description": "The Group class represents a collection of individual agents (From: http://xmlns.com/foaf/spec/#term_Group)",
+    "popoloEquivalent": "",
+    "type": "class",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "Law",
+    "mapping": "vote:Law",
+    "description": "A rule or a system of rules that a particular country or community recognizes as regulating the actions of its members and may enforce by the imposition of penalties.",
+    "popoloEquivalent": "",
+    "type": "class",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "law_number",
+    "mapping": "law_number",
+    "description": "The number of the Law.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "law_year",
+    "mapping": "law_year",
+    "description": "The year of the Law.",
+    "popoloEquivalent": "",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "Vote",
+    "mapping": "vote:Vote",
+    "description": "The Vote is the formal opinion of the agent about a disposition.",
+    "popoloEquivalent": "opengov:Vote",
+    "type": "class",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "agent",
+    "mapping": "schema:agent",
+    "description": "The one who votes.",
+    "popoloEquivalent": "schema:agent",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  },
+  {
+    "term": "vote_event",
+    "mapping": "schema:voteEvent",
+    "description": "The VoteEvent on which this vote was voted.",
+    "popoloEquivalent": "schema:voteEvent",
+    "type": "property",
+    "mappingUri": "http://www.google.com"
+  }
+]

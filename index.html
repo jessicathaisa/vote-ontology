@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Vote Ontology</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  </head>
+  <body ng-app="ontology">
+    <div class="container-fluid">
+      <div class="row" ng-controller="ClassAndPropertyCtrl">
+        <div class="col-md-12">
+          <h3>
+            1. Classes and properties
+          </h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  Term
+                </th>
+                <th>
+                  Ontology
+                </th>
+                <th>
+                  Description
+                </th>
+                <th>
+                  Popolo equivalent
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr ng-repeat="classAndProperty in classesAndProperties">
+                <td>
+                  {{classAndProperty.term}}
+                </td>
+                <td>
+                  <a ng-if="classAndProperty.mappingUri" ng-href="{{classAndProperty.mappingUri}}">{{classAndProperty.mapping}}</a>
+                  
+                  <span ng-if="!classAndProperty.mappingUri">
+                    {{classAndProperty.mapping}}
+                  </span>
+                </td>
+                <td>
+                  {{classAndProperty.description}} <!-- markdown -->
+                </td>
+                <td>
+                  {{classAndProperty.popoloEquivalent}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+    <script type="text/javascript">
+      angular.module('ontology', []);
+    </script>
+
+    <script src="scripts/classes-and-propertie-ctrl.js"></script>
+  </body>
+</html>

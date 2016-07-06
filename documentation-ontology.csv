@@ -1,0 +1,40 @@
+term;mapping;description;popoloEquivalent;type;mappingUri;popoloEquivalentUri
+Proposition;vote:Proposition;A proposition is a formal proposal for changing a law, or create a new one.;opengov:Motion;class;http://www.google.com;http://www.google.com
+content;vote:content;Is the content of the Proposition.;schema:text;property;http://www.google.com;http://www.google.com
+created;dcterms:created;The date on which the Proposition was proposed.;dcterms:dateSubmitted;property;http://www.google.com;http://www.google.com
+creator;dcterms:creator;The person who proposed de Proposition.;schema:creator;property;http://www.google.com;http://www.google.com
+document;vote:document;The Document of the Proposition.;;property;http://www.google.com;http://www.google.com
+explain;vote:explain;Na explanation about the Proposition.;;property;http://www.google.com;http://www.google.com
+keyword;vote:keyword;Keywords used to qualify the Proposition.;;property;http://www.google.com;http://www.google.com
+name;vote:name;The name of the Proposition.;;property;http://www.google.com;http://www.google.com
+number;vote:number;The number of the Proposition on the year.;;property;http://www.google.com;http://www.google.com
+principal;vote:principal;The Principal Proposition related to this Propositon.;;property;http://www.google.com;http://www.google.com
+situation;vote:situation;The situation of the Proposition.;;property;http://www.google.com;http://www.google.com
+theme;vote:theme;Themes used to qualify the area of the Proposition.;;property;http://www.google.com;http://www.google.com
+transational_regime;vote:transational_regime;The transational Regime in which the Proposition is.;;property;http://www.google.com;http://www.google.com
+transformed_into;vote:transformed_into;The Law this Proposition turned into.;;property;http://www.google.com;http://www.google.com
+type;vote:type;The type of the Proposition.;;property;http://www.google.com;http://www.google.com
+year;vote:year;The year of the Proposition.;;property;http://www.google.com;http://www.google.com
+Document;bibo:Document;A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information. (From http://purl.org/ontology/bibo/Document);;class;http://www.google.com;http://www.google.com
+uri;bibo:uri;Universal Resource Identifier of a document (From: http://purl.org/ontology/bibo/uri);;property;http://www.google.com;http://www.google.com
+Disposition;vote:Disposition;The Disposition on which the Proposition will be voted.;;class;http://www.google.com;http://www.google.com
+proposition_object;vote:proposition_object;The Proposition that there is the object of this Disposition.;;property;http://www.google.com;http://www.google.com
+disposition_nature;vote:disposition_nature;The nature of the disposition.;;property;http://www.google.com;http://www.google.com
+Session;vote:Session;A Session is an event on which Dispositions are voted.;;class;http://www.google.com;http://www.google.com
+superEvent;schema:superEvent; The Session in which the vote event occurs.;schema:superEvent;property;http://www.google.com;http://www.google.com
+VoteEvent;opengov:VoteEvent;A VoteEvent is na  event inside a Session on which a Disposition is voted;opengov:VoteEvent;class;http://www.google.com;http://www.google.com
+startDate;schema:startDate;The date when the VoteEvent begins.;schema:startDate;property;http://www.google.com;http://www.google.com
+summary;vote:summary;The summary of the VoteEvent.;;property;http://www.google.com;http://www.google.com
+voting_object;vote:voting_object;The Disposition will be voted on the VoteEvent.;;property;http://www.google.com;http://www.google.com
+Recommendation;vote:Recommendation;The Recommendation of a group on the voting object.;;class;http://www.google.com;http://www.google.com
+has_recommendation;vote:has_recommendation;The VoteEvent on which there is a recommendation.;;property;http://www.google.com;http://www.google.com
+recommended_by;vote:recommended_by;The Group that made the recomendation.;;property;http://www.google.com;http://www.google.com
+option;schema:option;The teor of the Recommendation or of the Vote.;schema:option;property;http://www.google.com;http://www.google.com
+Group;foaf:Group;The Group class represents a collection of individual agents (From: http://xmlns.com/foaf/spec/#term_Group);;class;http://www.google.com;http://www.google.com
+Law;vote:Law;"A rule or a system of rules that a particular country or community recognizes as regulating the actions of its members and may enforce by the imposition of penalties.
+";;class;http://www.google.com;http://www.google.com
+law_number;law_number;The number of the Law.;;property;http://www.google.com;http://www.google.com
+law_year;law_year;The year of the Law.;;property;http://www.google.com;http://www.google.com
+Vote;vote:Vote;The Vote is the formal opinion of the agent about a disposition.;opengov:Vote;class;http://www.google.com;http://www.google.com
+agent;schema:agent;The one who votes.;schema:agent;property;http://www.google.com;http://www.google.com
+vote_event;schema:voteEvent;The VoteEvent on which this vote was voted.;schema:voteEvent;property;http://www.google.com;http://www.google.com
