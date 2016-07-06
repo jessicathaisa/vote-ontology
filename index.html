@@ -9,54 +9,97 @@
   </head>
   <body ng-app="ontology">
     <div class="container-fluid">
-      <div class="row" ng-controller="ClassAndPropertyCtrl">
+      <div class="row">
         <div class="col-md-12">
-          <h3>
-            1. Classes and properties
-          </h3>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>
-                  Term
-                </th>
-                <th>
-                  Ontology
-                </th>
-                <th>
-                  Description
-                </th>
-                <th>
-                  Popolo equivalent
-                </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr ng-repeat="classAndProperty in classesAndProperties">
-                <td>
-                  {{classAndProperty.term}}
-                </td>
-                <td>
-                  <a ng-if="classAndProperty.mappingUri" ng-href="{{classAndProperty.mappingUri}}">{{classAndProperty.mapping}}</a>
-                  
-                  <span ng-if="!classAndProperty.mappingUri">
-                    {{classAndProperty.mapping}}
-                  </span>
-                </td>
-                <td>
-                  {{classAndProperty.description}} <!-- markdown -->
-                </td>
-                <td>
-                  {{classAndProperty.popoloEquivalent}}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <h1>Voting Ontology <small>An ontology for parliament voting</small></h1>
+          <blockquote>
+            <p>
+              This project was developed during the classes of Semantic Web in 2015.2 at <a href="http://www.puc-rio.br">PUC-Rio</a>.<br>
+              Professor: <a href="http://www-di.inf.puc-rio.br/schwabe/">Daniel Schwabe</a>.<br>
+              The students are: Alexander Chaves and <a href="http://www.inf.puc-rio.br/~jalmeida/">Jéssica Almeida</a>.
+            </p>
+          </blockquote>
         </div>
       </div>
-    </div>
-    
+      <div class="row">
+        <div class="col-md-12">
+          <h3>The Project</h3>
+          <p>
+            The project consists in make a triplification process for the voting data collected from the <a href="http://www2.camara.leg.br/transparencia/dados-abertos/dados-abertos-legislativo/webservices/proposicoes-1">Câmara Federal webservers</a>, making a process of modelling this data in RDF. To achive this goal we use Karma (<a href="http://usc-isi-i2.github.io/karma/">http://usc-isi-i2.github.io/karma/</a>) as our data integration tool applying a transformation from some XML files, into a single RDF Model, using well known ontologies, and constructing our own ontology.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>The Voting Ontology</h3>
+          <p>
+            The results of this work are a preliminarly ontology that represents the Voting Process by using the concepts of Propositions, Sessions, Votations, Votes, Recomendations and some other relative entities of the voting process. <br>
+            The ontology we build is based on a set of principal Classes and Properties that allow a representation of voting process and are better described below.
+          </p>
+        </div>
+        <div class="col-md-12" ng-controller="ClassAndPropertyCtrl">
+          <blockquote>
+            <h3>
+              1. Classes and properties
+            </h3>
+            <div class="table-responsive">
+              <table class="table table-condensed">
+                <thead>
+                  <tr>
+                    <th>
+                      Term
+                    </th>
+                    <th>
+                      Ontology
+                    </th>
+                    <th>
+                      Description
+                    </th>
+                    <th>
+                      Popolo equivalent
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr ng-repeat="classAndProperty in classesAndProperties">
+                    <td>
+                      {{classAndProperty.term}}
+                    </td>
+                    <td>
+                      <a ng-if="classAndProperty.mappingUri" ng-href="{{classAndProperty.mappingUri}}">{{classAndProperty.mapping}}</a>
+                      
+                      <span ng-if="!classAndProperty.mappingUri">
+                        {{classAndProperty.mapping}}
+                      </span>
+                    </td>
+                    <td>
+                      {{classAndProperty.description}} <!-- markdown -->
+                    </td>
+                    <td>
+                      {{classAndProperty.popoloEquivalent}}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </blockquote>
+        </div> <!-- End of Class and Properties -->
+
+        <div class="col-md-12">
+          <blockquote>
+            <h3>
+              2. Our ontology
+            </h3>
+            <img class="img-responsive"src="ontologies/votingOntology.PNG">
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+      </div>
+    </div> <!-- End of Container Fluid -->
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified JavaScript -->

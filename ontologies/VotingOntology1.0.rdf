@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY schema "http://schema.org/" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/spec/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY bibo "http://purl.org/ontology/bibo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vote "http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#" >
+    <!ENTITY par "http://www.inf.puc-rio.br/~rmagalhaes/projetos/ParliamentOntology.rdf" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#"
+     xml:base="http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology"
+     xmlns:schema="http://schema.org/"
+     xmlns:par="http://www.inf.puc-rio.br/~rmagalhaes/projetos/ParliamentOntology.rdf"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vote="http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#"
+     xmlns:foaf="http://xmlns.com/foaf/spec/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <rdf:Description rdf:about="&rdfs;label">
+        <rdfs:domain rdf:resource="http://www.w3.org/2009/08/skos-reference/skos.html#Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:ObjectProperty rdf:about="&dcterms;creator">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#document -->
+
+    <owl:ObjectProperty rdf:about="&vote;document">
+        <rdfs:range rdf:resource="&bibo;Document"/>
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#has_recommendation -->
+
+    <owl:ObjectProperty rdf:about="&vote;has_recommendation">
+        <rdfs:range rdf:resource="&vote;Recommendation"/>
+        <rdfs:domain rdf:resource="&vote;VoteEvent"/>
+        <owl:inverseOf rdf:resource="&vote;recommendation_for"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#keyword -->
+
+    <owl:ObjectProperty rdf:about="&vote;keyword">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2009/08/skos-reference/skos.html#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#principal -->
+
+    <owl:ObjectProperty rdf:about="&vote;principal">
+        <rdfs:range rdf:resource="&vote;Proposition"/>
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#proposition_object -->
+
+    <owl:ObjectProperty rdf:about="&vote;proposition_object">
+        <rdfs:domain rdf:resource="&vote;Disposition"/>
+        <rdfs:range rdf:resource="&vote;Proposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#recommendation_for -->
+
+    <owl:ObjectProperty rdf:about="&vote;recommendation_for">
+        <rdfs:domain rdf:resource="&vote;Recommendation"/>
+        <rdfs:range rdf:resource="&vote;VoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#recommended_by -->
+
+    <owl:ObjectProperty rdf:about="&vote;recommended_by">
+        <rdfs:domain rdf:resource="&vote;Recommendation"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#theme -->
+
+    <owl:ObjectProperty rdf:about="&vote;theme">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2009/08/skos-reference/skos.html#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#transformed_into -->
+
+    <owl:ObjectProperty rdf:about="&vote;transformed_into">
+        <rdfs:range rdf:resource="&vote;Law"/>
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#vote_event -->
+
+    <owl:ObjectProperty rdf:about="&vote;vote_event">
+        <rdfs:domain rdf:resource="&vote;Vote"/>
+        <rdfs:range rdf:resource="&vote;VoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#voting_object -->
+
+    <owl:ObjectProperty rdf:about="&vote;voting_object">
+        <rdfs:range rdf:resource="&vote;Disposition"/>
+        <rdfs:domain rdf:resource="&vote;VoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/agent -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/agent">
+        <rdfs:domain rdf:resource="&vote;Vote"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/superEvent -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/superEvent">
+        <rdfs:range rdf:resource="&vote;Session"/>
+        <rdfs:domain rdf:resource="&vote;VoteEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:DatatypeProperty rdf:about="&dcterms;created">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:DatatypeProperty rdf:about="&dcterms;identifier"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/uri -->
+
+    <owl:DatatypeProperty rdf:about="&bibo;uri">
+        <rdfs:domain rdf:resource="&bibo;Document"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#content -->
+
+    <owl:DatatypeProperty rdf:about="&vote;content">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#disposition_nature -->
+
+    <owl:DatatypeProperty rdf:about="&vote;disposition_nature">
+        <rdfs:domain rdf:resource="&vote;Disposition"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#explain -->
+
+    <owl:DatatypeProperty rdf:about="&vote;explain">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#law_number -->
+
+    <owl:DatatypeProperty rdf:about="&vote;law_number">
+        <rdfs:domain rdf:resource="&vote;Law"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#law_year -->
+
+    <owl:DatatypeProperty rdf:about="&vote;law_year">
+        <rdfs:domain rdf:resource="&vote;Law"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#name -->
+
+    <owl:DatatypeProperty rdf:about="&vote;name">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#number -->
+
+    <owl:DatatypeProperty rdf:about="&vote;number">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#situation -->
+
+    <owl:DatatypeProperty rdf:about="&vote;situation">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#summary -->
+
+    <owl:DatatypeProperty rdf:about="&vote;summary">
+        <rdfs:domain rdf:resource="&vote;VoteEvent"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#transational_regime -->
+
+    <owl:DatatypeProperty rdf:about="&vote;transational_regime">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#type -->
+
+    <owl:DatatypeProperty rdf:about="&vote;type">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#year -->
+
+    <owl:DatatypeProperty rdf:about="&vote;year">
+        <rdfs:domain rdf:resource="&vote;Proposition"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:DatatypeProperty rdf:about="&rdfs;label">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/option -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/option">
+        <rdfs:domain rdf:resource="&vote;Recommendation"/>
+        <rdfs:domain rdf:resource="&vote;Vote"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/startDate -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/startDate">
+        <rdfs:domain rdf:resource="&vote;VoteEvent"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ontology/bibo/Document -->
+
+    <owl:Class rdf:about="&bibo;Document"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#Disposition -->
+
+    <owl:Class rdf:about="&vote;Disposition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#Law -->
+
+    <owl:Class rdf:about="&vote;Law"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#Proposition -->
+
+    <owl:Class rdf:about="&vote;Proposition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#Recommendation -->
+
+    <owl:Class rdf:about="&vote;Recommendation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#Session -->
+
+    <owl:Class rdf:about="&vote;Session">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Event"/>
+        <rdfs:comment xml:lang="en">Session represents an event in witch there are some votings.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#Vote -->
+
+    <owl:Class rdf:about="&vote;Vote"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jessica/ontologies/2015/10/VoteOntology#VoteEvent -->
+
+    <owl:Class rdf:about="&vote;VoteEvent">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2009/08/skos-reference/skos.html#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2009/08/skos-reference/skos.html#Concept"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Group -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://schema.org/Event -->
+
+    <owl:Class rdf:about="https://schema.org/Event"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

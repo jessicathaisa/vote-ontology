@@ -5,7 +5,8 @@
     "description": "A proposition is a formal proposal for changing a law, or create a new one.",
     "popoloEquivalent": "opengov:Motion",
     "type": "class",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "content",
@@ -13,7 +14,8 @@
     "description": "Is the content of the Proposition.",
     "popoloEquivalent": "schema:text",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": "https://schema.org/text"
   },
   {
     "term": "created",
@@ -21,7 +23,8 @@
     "description": "The date on which the Proposition was proposed.",
     "popoloEquivalent": "dcterms:dateSubmitted",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "http://dublincore.org/documents/dcmi-terms/#terms-created",
+    "popoloEquivalentUri": "http://dublincore.org/documents/dcmi-terms/#terms-dateSubmitted"
   },
   {
     "term": "creator",
@@ -29,7 +32,8 @@
     "description": "The person who proposed de Proposition.",
     "popoloEquivalent": "schema:creator",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "http://dublincore.org/documents/dcmi-terms/#terms-creator",
+    "popoloEquivalentUri": "https://schema.org/creator"
   },
   {
     "term": "document",
@@ -37,7 +41,8 @@
     "description": "The Document of the Proposition.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "explain",
@@ -45,7 +50,8 @@
     "description": "Na explanation about the Proposition.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "keyword",
@@ -53,7 +59,8 @@
     "description": "Keywords used to qualify the Proposition.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "name",
@@ -61,7 +68,8 @@
     "description": "The name of the Proposition.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "number",
@@ -69,7 +77,8 @@
     "description": "The number of the Proposition on the year.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "principal",
@@ -77,7 +86,8 @@
     "description": "The Principal Proposition related to this Propositon.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "situation",
@@ -85,7 +95,8 @@
     "description": "The situation of the Proposition.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "theme",
@@ -93,7 +104,8 @@
     "description": "Themes used to qualify the area of the Proposition.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "transational_regime",
@@ -101,7 +113,8 @@
     "description": "The transational Regime in which the Proposition is.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "transformed_into",
@@ -109,7 +122,8 @@
     "description": "The Law this Proposition turned into.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "type",
@@ -117,7 +131,8 @@
     "description": "The type of the Proposition.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "year",
@@ -125,7 +140,8 @@
     "description": "The year of the Proposition.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "Document",
@@ -133,7 +149,8 @@
     "description": "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information. (From http://purl.org/ontology/bibo/Document)",
     "popoloEquivalent": "",
     "type": "class",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "uri",
@@ -141,7 +158,8 @@
     "description": "Universal Resource Identifier of a document (From: http://purl.org/ontology/bibo/uri)",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "Disposition",
@@ -149,7 +167,8 @@
     "description": "The Disposition on which the Proposition will be voted.",
     "popoloEquivalent": "",
     "type": "class",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "proposition_object",
@@ -157,7 +176,8 @@
     "description": "The Proposition that there is the object of this Disposition.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "disposition_nature",
@@ -165,7 +185,8 @@
     "description": "The nature of the disposition.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "Session",
@@ -173,7 +194,8 @@
     "description": "A Session is an event on which Dispositions are voted.",
     "popoloEquivalent": "",
     "type": "class",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "superEvent",
@@ -181,23 +203,26 @@
     "description": "The Session in which the vote event occurs.",
     "popoloEquivalent": "schema:superEvent",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "https://schema.org/superEvent",
+    "popoloEquivalentUri": "https://schema.org/superEvent"
   },
   {
     "term": "VoteEvent",
-    "mapping": "opengov:VoteEvent",
+    "mapping": "vote:VoteEvent",
     "description": "A VoteEvent is na  event inside a Session on which a Disposition is voted",
     "popoloEquivalent": "opengov:VoteEvent",
     "type": "class",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "startDate",
-    "mapping": "schema:startDate",
+    "mapping": ":schema:startDate",
     "description": "The date when the VoteEvent begins.",
     "popoloEquivalent": "schema:startDate",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "https://schema.org/startDate",
+    "popoloEquivalentUri": "https://schema.org/startDate"
   },
   {
     "term": "summary",
@@ -205,7 +230,8 @@
     "description": "The summary of the VoteEvent.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "voting_object",
@@ -213,7 +239,8 @@
     "description": "The Disposition will be voted on the VoteEvent.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "Recommendation",
@@ -221,7 +248,8 @@
     "description": "The Recommendation of a group on the voting object.",
     "popoloEquivalent": "",
     "type": "class",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "has_recommendation",
@@ -229,7 +257,8 @@
     "description": "The VoteEvent on which there is a recommendation.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "recommended_by",
@@ -237,7 +266,8 @@
     "description": "The Group that made the recomendation.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "option",
@@ -245,7 +275,8 @@
     "description": "The teor of the Recommendation or of the Vote.",
     "popoloEquivalent": "schema:option",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "https://schema.org/option",
+    "popoloEquivalentUri": "https://schema.org/option"
   },
   {
     "term": "Group",
@@ -253,7 +284,8 @@
     "description": "The Group class represents a collection of individual agents (From: http://xmlns.com/foaf/spec/#term_Group)",
     "popoloEquivalent": "",
     "type": "class",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "http://xmlns.com/foaf/spec/#term_Group",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "Law",
@@ -261,23 +293,26 @@
     "description": "A rule or a system of rules that a particular country or community recognizes as regulating the actions of its members and may enforce by the imposition of penalties.",
     "popoloEquivalent": "",
     "type": "class",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "law_number",
-    "mapping": "law_number",
+    "mapping": "vote:law_number",
     "description": "The number of the Law.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "law_year",
-    "mapping": "law_year",
+    "mapping": "vote:law_year",
     "description": "The year of the Law.",
     "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "Vote",
@@ -285,7 +320,8 @@
     "description": "The Vote is the formal opinion of the agent about a disposition.",
     "popoloEquivalent": "opengov:Vote",
     "type": "class",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   },
   {
     "term": "agent",
@@ -293,14 +329,16 @@
     "description": "The one who votes.",
     "popoloEquivalent": "schema:agent",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "https://schema.org/agent",
+    "popoloEquivalentUri": "https://schema.org/agent"
   },
   {
     "term": "vote_event",
-    "mapping": "schema:voteEvent",
+    "mapping": "vote:voteEvent",
     "description": "The VoteEvent on which this vote was voted.",
-    "popoloEquivalent": "schema:voteEvent",
+    "popoloEquivalent": "",
     "type": "property",
-    "mappingUri": "http://www.google.com"
+    "mappingUri": "",
+    "popoloEquivalentUri": ""
   }
 ]

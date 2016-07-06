@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY schema "http://schema.org/" >
+    <!ENTITY http "http://127.0.0.1:3333/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY wgs84_pos "http://www.w3.org/2003/01/geo/wgs84_pos#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY default "http://www.owl-ontologies.com/ParliamentOntology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.owl-ontologies.com/ParliamentOntology.owl#"
+     xml:base="http://www.owl-ontologies.com/ParliamentOntology.owl"
+     xmlns:schema="http://schema.org/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:default="http://www.owl-ontologies.com/ParliamentOntology.owl#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:http="http://127.0.0.1:3333/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/ParliamentOntology.owl">
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#alternate -->
+
+    <owl:ObjectProperty rdf:about="&default;alternate">
+        <rdfs:domain rdf:resource="&default;Elective_Office"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#ancestorOf -->
+
+    <owl:ObjectProperty rdf:about="&default;ancestorOf">
+        <rdfs:comment rdf:datatype="&xsd;string">A person from whom one is descended.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&default;descendentOf"/>
+        <rdfs:subPropertyOf rdf:resource="&default;relatedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#childOf -->
+
+    <owl:ObjectProperty rdf:about="&default;childOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&default;descendentOf"/>
+        <owl:inverseOf rdf:resource="&default;parentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#descendentOf -->
+
+    <owl:ObjectProperty rdf:about="&default;descendentOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A person from whom one is ancestor.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&default;relatedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#electedTo -->
+
+    <owl:ObjectProperty rdf:about="&default;electedTo">
+        <rdfs:domain rdf:resource="&default;Elective_Office"/>
+        <rdfs:range rdf:resource="&default;State_Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#electoral_domicile -->
+
+    <owl:ObjectProperty rdf:about="&default;electoral_domicile">
+        <rdfs:range rdf:resource="&schema;Place"/>
+        <rdfs:domain rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#hasPlace -->
+
+    <owl:ObjectProperty rdf:about="&default;hasPlace">
+        <rdfs:range rdf:resource="&schema;Place"/>
+        <rdfs:domain rdf:resource="&default;Member_Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#indicatedBy -->
+
+    <owl:ObjectProperty rdf:about="&default;indicatedBy">
+        <rdfs:domain rdf:resource="&default;Member_Role"/>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#isAfilliated -->
+
+    <owl:ObjectProperty rdf:about="&default;isAfilliated">
+        <rdfs:range rdf:resource="&default;Political_Party"/>
+        <rdfs:domain rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#isAppointedTo -->
+
+    <owl:ObjectProperty rdf:about="&default;isAppointedTo">
+        <rdfs:range rdf:resource="&foaf;Organization"/>
+        <rdfs:domain rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="&default;isMemberOf">
+        <rdfs:range rdf:resource="&default;Caucus"/>
+        <rdfs:domain rdf:resource="&foaf;Person"/>
+        <owl:inverseOf rdf:resource="&foaf;member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="&default;isPartOf">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:domain rdf:resource="&foaf;Organization"/>
+        <rdfs:range rdf:resource="&foaf;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="&default;isRelatedTo">
+        <rdfs:range rdf:resource="&default;Member_Role"/>
+        <owl:inverseOf rdf:resource="&default;relatesTo"/>
+        <rdfs:domain rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#nominatedBy -->
+
+    <owl:ObjectProperty rdf:about="&default;nominatedBy">
+        <rdfs:domain rdf:resource="&default;Member_Role"/>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#officeHolder -->
+
+    <owl:ObjectProperty rdf:about="&default;officeHolder">
+        <rdfs:domain rdf:resource="&default;Elective_Office"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#parentOf -->
+
+    <owl:ObjectProperty rdf:about="&default;parentOf">
+        <rdfs:subPropertyOf rdf:resource="&default;ancestorOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#region -->
+
+    <owl:ObjectProperty rdf:about="&default;region">
+        <rdfs:range rdf:resource="&schema;Place"/>
+        <rdfs:domain rdf:resource="&foaf;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#relatedTo -->
+
+    <owl:ObjectProperty rdf:about="&default;relatedTo">
+        <rdfs:comment rdf:datatype="&xsd;string">&lt;p style=&quot;margin-top: 0&quot;&gt;
+      General relationship property, all other relationship specialization properties will come from this one.
+    &lt;/p&gt;</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&default;relates"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+        <rdfs:domain rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#relates -->
+
+    <owl:ObjectProperty rdf:about="&default;relates">
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+        <rdfs:domain rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#relatesTo -->
+
+    <owl:ObjectProperty rdf:about="&default;relatesTo">
+        <rdfs:domain rdf:resource="&default;Member_Role"/>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#siblingOf -->
+
+    <owl:ObjectProperty rdf:about="&default;siblingOf">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&default;relatedTo"/>
+        <owl:inverseOf rdf:resource="&default;siblingOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#spouseOf -->
+
+    <owl:ObjectProperty rdf:about="&default;spouseOf">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&default;relatedTo"/>
+        <owl:inverseOf rdf:resource="&default;spouseOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#ElectoralRegistryNumber -->
+
+    <owl:DatatypeProperty rdf:about="&default;ElectoralRegistryNumber">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&prov;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#end -->
+
+    <owl:DatatypeProperty rdf:about="&default;end">
+        <rdfs:comment rdf:datatype="&xsd;string">End date.</rdfs:comment>
+        <rdfs:domain rdf:resource="&default;Member_Role"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#start -->
+
+    <owl:DatatypeProperty rdf:about="&default;start">
+        <rdfs:comment rdf:datatype="&xsd;string">Start date.</rdfs:comment>
+        <rdfs:domain rdf:resource="&default;Member_Role"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/Place -->
+
+    <owl:Class rdf:about="&schema;Place"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#Caucus -->
+
+    <owl:Class rdf:about="&default;Caucus">
+        <rdfs:subClassOf rdf:resource="&foaf;Group"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A group of people with shared concerns within a political party or larger organization.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#County -->
+
+    <owl:Class rdf:about="&default;County">
+        <rdfs:subClassOf rdf:resource="&default;Executive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#Elective_Office -->
+
+    <owl:Class rdf:about="&default;Elective_Office">
+        <rdfs:subClassOf rdf:resource="&default;Member_Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#Executive -->
+
+    <owl:Class rdf:about="&default;Executive">
+        <rdfs:subClassOf rdf:resource="&default;State_Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#Federative_Unit -->
+
+    <owl:Class rdf:about="&default;Federative_Unit">
+        <rdfs:subClassOf rdf:resource="&default;Executive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#HouseOfRepresentatives -->
+
+    <owl:Class rdf:about="&default;HouseOfRepresentatives">
+        <rdfs:subClassOf rdf:resource="&default;Legislative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#Judiciary -->
+
+    <owl:Class rdf:about="&default;Judiciary">
+        <rdfs:subClassOf rdf:resource="&default;State_Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#Legislative -->
+
+    <owl:Class rdf:about="&default;Legislative">
+        <rdfs:subClassOf rdf:resource="&default;State_Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#Member_Role -->
+
+    <owl:Class rdf:about="&default;Member_Role">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#Political_Party -->
+
+    <owl:Class rdf:about="&default;Political_Party">
+        <rdfs:subClassOf rdf:resource="&foaf;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#Presidency -->
+
+    <owl:Class rdf:about="&default;Presidency">
+        <rdfs:subClassOf rdf:resource="&default;Executive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#Senate -->
+
+    <owl:Class rdf:about="&default;Senate">
+        <rdfs:subClassOf rdf:resource="&default;Legislative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/ParliamentOntology.owl#State_Organization -->
+
+    <owl:Class rdf:about="&default;State_Organization">
+        <rdfs:subClassOf rdf:resource="&foaf;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="&skos;Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="&skos;ConceptScheme"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="&foaf;Agent"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Group -->
+
+    <owl:Class rdf:about="&foaf;Group"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="&foaf;Organization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="&foaf;Person">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wgs84_pos;SpatialThing"/>
+                    <rdf:Description rdf:about="&foaf;Agent"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
